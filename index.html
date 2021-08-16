@@ -46,9 +46,9 @@
                     </div>
                     <div class="right">
                         <ul>
-                            <li><a href="#" class="d s"><i class="fa fa-dribbble fa-2x" aria-hidden="true" style="color:#fff;"></i></a></li>
-                            <li><a href="#" class="i s"><i class="fa fa-github fa-2x" aria-hidden="true" style="color:#fff;"></i></a></li>
-                            <li><a href="#" class="g s"><i class="fa fa-linkedin fa-2x" aria-hidden="true" style="color:#fff;"></i></a></li>
+                            <li><a href="#" class="instagram  s"><img  src="img/instagram.svg" alt=""></a></li>
+                            <li><a href="#" class="linkedin s"><img src="img/linkedin.svg" alt=""></a></li>
+                            <li><a href="#" class="facebook s"><img src="img/facebook.svg" alt=""></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -68,7 +68,9 @@
                 <p class="y_text">We are the citizens of this WORLD as WIDE as it is, we have connections through out the WEB.</p>
             </div>
         </div>
+        <a class="read" href="#" target="_blank">Read more</a>
         <img class="liqued4" src="img/liqued4-01.svg" alt="">
+        
     </section>
 
 <!-- services -->
@@ -250,6 +252,9 @@
                 <img class="launch" src="img/launch.png" alt="">
                 <p>I'm Launched</p>
             </div>
+            <div class="process_list2">
+                <img class="desktop" src="img/proc-01.png" alt="">
+            </div>
         </div>
         <img class="liqued2" src="img/liqued2.svg" alt="">
     </section>
@@ -313,7 +318,7 @@
             <div class="contact-left"><!-- left column -->
                 <h2>Contact</h2>
 
-                <form action=""><!-- form -->
+                <form action="ajax/contact.php" method="POST" id="submit_form" class="ajax"><!-- form -->
                     <input type="text" id="name" name="name" placeholder="Name">
                     <input type="email" id="Email" name="name" placeholder="email">
                     <!-- <label for="budget">Budget</label> -->
@@ -325,12 +330,15 @@
                     </select>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="How can we help you?"></textarea>
                     <div class="check">
-                        <input type="checkbox" id="tc" name="tc"
+                        <input type="checkbox" class="cb" id="tc" name="tc"
                                checked>
                         <label for="tc">I give concent for you to contact me.</label>
                       </div>
                     <input type="submit" class="send-message-cta" value="Send message">
                 </form>
+            </div>
+            <div class="contact-right">
+                <img src="img/contact_img-01.png" alt="Portfolio">
             </div>
         </div>
     </section>
@@ -354,7 +362,10 @@
 
 <!-- Javascrip for mobile burger menu -->
 
-    <script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+    <!-- <script>
         const mobileBtn = document.getElementById('mobile-cta')
                 nav = document.querySelector('nav')
                 mobileBtnExit = document.getElementById('mobile-exit');
@@ -366,7 +377,6 @@
         mobileBtnExit.addEventListener('click',() =>{
             nav.classList.remove('menu-btn');
         })
-    </script>
-
+    </script> -->
 </body>
 </html>
