@@ -24,15 +24,35 @@ ul {
 
 /****************************** PHONE STYLING ********************/
 @media only screen and (min-width: 320px) {
-  /************************navbar*********************/
+  h4 {
+    font-size: 1.3em;
+    padding-bottom: 1em;
+    text-align: center;
+    margin: 0;
+  }
+  p {
+    padding-bottom: 1em;
+    font-size: .8em;
+  }
+  .process_list p {
+    font-weight: 700;
+  }
+  /************************navbar***********************************************/
   .navbar {
     background: white;
-    padding: 1em 1em 1em 1em;
-    top: 0;
     position: -webkit-sticky;
     position: sticky;
     z-index: 100;
-    height: 70px;
+    padding: 1em 0 1em 0;
+  }
+  .navbar .container .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
   }
   .navbar .container {
     display: -webkit-box;
@@ -44,7 +64,6 @@ ul {
     display: none;
   }
   .navbar .logo .logo1 {
-    margin-top: -.4em;
     width: 50px;
   }
   .navbar .mobile-menu {
@@ -52,88 +71,118 @@ ul {
     cursor: pointer;
   }
   .navbar nav {
-    display: none;
-  }
-  .navbar li.current a {
-    font-weight: bold;
-  }
-  nav {
     position: fixed;
     z-index: 999;
-    width: 50%;
+    display: none;
+    width: 100%;
     right: 0;
     top: 0;
     background: #040425;
     height: 100vh;
+    padding: 0;
+  }
+  .navbar nav .navList {
     padding: 1em;
+    margin-top: 2em;
   }
-  nav .primary-nav {
-    margin-top: 5em;
-  }
-  nav li a {
-    color: white;
-    display: block;
-    padding: .5em;
-    font-size: 1.3em;
-    text-align: left;
-  }
-  nav li a:hover {
+  .navbar nav li.current a {
     font-weight: bold;
   }
-  .mobile-menu {
+  .navbar nav li a {
+    color: white;
+    display: block;
+    padding: 0 .6em 0 .6em;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  .navbar nav li a:hover {
+    font-weight: bold;
+  }
+  .navbar nav .closeNav {
+    height: 5.2em;
+    background: white;
+  }
+  .navbar .mobile-menu {
     cursor: pointer;
   }
-  #mobile-exit {
-    width: 15%;
+  .navbar #mobile-exit {
+    width: 10%;
   }
-  nav.menu-btn {
+  .navbar nav.menu-btn {
     display: block;
   }
-  .mobile-menu-exit {
-    float: right;
-    margin: .5em;
-    padding-right: 1em;
+  .navbar .mobile-menu-exit {
+    padding-top: 1.5em;
     cursor: pointer;
   }
-  /*************************** hero section ************************/
+  /*************************** hero section **************************************/
   #banner {
     background-color: #040425;
-    height: 345px;
   }
   #banner .slogan {
     color: yellow;
+    font-size: .8em;
   }
-  .bunner_content {
+  #banner .bunner_content {
+    color: white;
+  }
+  #banner .bunner_content .left {
+    padding: 3em 0 1em 0;
+  }
+  #banner .bunner_content .left .space {
+    display: none;
+  }
+  #banner .bunner_content .left .cta {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    place-content: center;
-    text-align: center;
-    color: white;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-top: 2em;
   }
-  .bunner_content .center, .bunner_content .right {
+  #banner .bunner_content .center, #banner .bunner_content .right {
     display: none;
   }
-  .bunner_content h1 {
+  #banner .bunner_content h1 {
     font-size: 1.3em;
+    margin: 0;
   }
-  .row {
-    padding: 5em 0 7em 0;
+  #banner .bunner_content .cta .calltoaction2 a {
+    color: white;
+    width: 90px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: .65em;
+    border: 3px solid white;
+    border-radius: 5em;
+    display: inline-block;
+    padding: .8em 1em;
+    cursor: pointer;
+    margin-top: 1em;
   }
-  img.liqued {
-    position: absolute;
-    margin-top: -5em;
-    margin-left: -5px;
+  #banner .bunner_content .cta .calltoaction1 a {
+    color: yellow;
+    width: 90px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: .65em;
+    border: 3px solid yellow;
+    border-radius: 5em;
+    display: inline-block;
+    padding: .8em 1em;
+    cursor: pointer;
+    margin-top: 1.5em;
   }
-  /**************** Why Us (2nd section) **************************/
+  #banner img.liqued {
+    margin-bottom: -1em;
+  }
+  /**************** Why Us (2nd section) ******************************************/
   #y_us {
     background-color: yellow;
-    padding-top: 1em;
-  }
-  h4 {
-    font-size: 1.3em;
-    padding-bottom: 1em;
-    text-align: center;
   }
   .y_up {
     display: block;
@@ -144,49 +193,36 @@ ul {
     height: 25%;
   }
   img.liqued4 {
-    position: aboslute;
     margin-bottom: -1em;
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-  }
-  .y_text {
-    font-size: 15px;
-    margin-bottom: -1em;
   }
   span {
     color: #040425;
   }
   .read {
-    z-index: 99;
     color: #040425;
     font-size: 12px;
-    margin-left: 10.5em;
   }
-  /********************* servies styling (3rd section) *************************/
+  /********************* servies styling (3rd section) **********************************/
   .services_left {
     text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
   }
-  .services_right p {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-  .services_right .services_img {
-    margin-top: -21em;
-    width: 280px;
-    margin-left: 1em;
-  }
-  .services_right p {
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-    padding-bottom: 1em;
+  .services_right .servSvg {
+    width: 256px;
+    height: 330px;
   }
   /*************************  Process styling (4th section) *******************************/
   #process {
-    margin-top: -19em;
     display: block;
     text-align: center;
     position: relative;
+    padding-top: 3em;
+  }
+  #process .process_container {
+    margin-top: 1.6em;
   }
   #process h4 {
     padding-bottom: 0;
@@ -196,10 +232,6 @@ ul {
   }
   #process img.launch {
     width: 250px !important;
-  }
-  #process p {
-    margin-top: -.5em;
-    font-weight: 700;
   }
   #process .liqued2 {
     position: aboslute;
@@ -220,13 +252,6 @@ ul {
     width: 80%;
     height: 30%;
     padding-bottom: .5em;
-  }
-  #work .work_disc {
-    padding-bottom: 1em;
-    font-size: 15px;
-  }
-  #work p {
-    font-size: .8em;
   }
   /*********************** portfolio list (part of work section) *************************/
   .portfolio-container a img {
@@ -260,13 +285,14 @@ ul {
   }
   .contact-section h2 {
     font-size: 1.3em;
-    color: black;
+    color: white;
   }
   .contact-section label {
     display: block;
     font-size: 1.2em;
     -webkit-margin-after: .5em;
             margin-block-end: .5em;
+    font-family: 'Poppins';
   }
   .contact-section input, .contact-section textarea {
     width: 100%;
@@ -274,8 +300,10 @@ ul {
     -webkit-margin-after: 1em;
             margin-block-end: 1em;
     border-radius: .3em;
+    border: 1px solid #040425;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    font-family: 'Poppins';
   }
   .contact-section select {
     width: 100%;
@@ -283,7 +311,8 @@ ul {
     margin-bottom: 1em;
   }
   .contact-section #budget {
-    padding: .8em .6em .8em .6em;
+    font-family: 'Poppins';
+    padding: 0.8em;
   }
   .contact-section .check {
     display: -webkit-box;
@@ -296,7 +325,7 @@ ul {
     margin-right: 1em;
   }
   .contact-section p, .contact-section label {
-    font: 13px 'Fira Sans', sans-serif;
+    font: 13px 'Fira Sans', poppins;
     margin-top: .2em;
   }
   .contact-section .send-message-cta {
@@ -305,49 +334,68 @@ ul {
     font-weight: bold;
     font-size: .8em;
     border: 3px solid #040425;
-    margin-bottom: 5em;
     border-radius: 5em;
     display: inline-block;
     padding: .8em 2em;
     width: unset;
     cursor: pointer;
     margin-top: 1.5em;
+    margin-bottom: 2em;
   }
   .contact-section .contact-right {
+    display: none;
+  }
+  .contact-section form .button-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-section .button-area button:hover {
+    background: #040425;
+  }
+  .contact-section .button-area span {
+    font-size: 17px;
+    margin-left: 30px;
+    margin-top: -60px;
     display: none;
   }
   /****************************footer section (7th section) ******************************/
   #footer {
     background: #040425;
-    height: 100px;
-    padding-top: 1em;
+    padding: 1em 2em 1em 2em;
   }
-  footer {
+  #footer .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer .logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  footer .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  footer .logo span {
+  #footer .logo span {
     display: none;
   }
   .logo {
-    width: 60px;
-    height: 60px;
-    padding-top: 1em;
+    width: 50px;
+    height: 50px;
   }
-  footer ul {
+  #footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 2em;
-    margin-top: 2em;
   }
-  footer ul a {
+  #footer ul a {
     padding-left: .55em;
     color: white;
     font-size: .75em;
@@ -355,617 +403,280 @@ ul {
 }
 
 /******************** BIGGER PHONETABLET *********************/
-@media only screen and (min-width: 342px) and (max-width: 387px) {
-  img.liqued {
-    margin-top: -3em;
-    margin-left: -.5em;
-    width: 100%;
+@media only screen and (min-width: 375px) {
+  .services_right .servSvg {
+    width: 310px;
+    height: 400px;
   }
-  .read {
-    margin-left: 12.85em;
-  }
-  .services_right .services_img {
-    margin-top: -21em;
-    width: 300px;
-    margin-left: 3em;
-  }
-  .footer-list {
-    margin-left: 3em;
-  }
-  .liqued3 {
-    margin-top: -3em;
-    margin-left: -.5em;
-    width: 1%;
-  }
-}
-
-@media only screen and (min-width: 388px) {
-  #banner {
-    height: 330px;
-  }
-  img.liqued {
-    margin-top: -4em;
-    margin-left: -.5em;
-  }
-  .read {
-    margin-left: 13.6em;
-  }
-  .services_right .services_img {
-    margin-top: -21em;
-    width: 300px;
-    margin-left: 7em;
-  }
-  .footer-list {
-    margin-left: 3.8em;
-  }
-}
-
-@media only screen and (min-width: 390px) {
-  img.liqued {
-    margin-top: -4em;
-    margin-left: -.5em;
-  }
-  .read {
-    margin-left: 15em;
-  }
-  .services_right .services_img {
-    margin-top: -21em;
-    width: 300px;
-    margin-left: 4em;
-  }
-}
-
-@media only screen and (min-width: 511px) {
-  .read {
-    margin-left: 19em;
-  }
-  .footer-list {
-    margin-left: 10.8em;
-  }
-  .services_right .services_img {
-    margin-left: 7em;
-  }
-}
-
-@media only screen and (min-width: 591px) {
-  #banner {
-    height: 390px;
-  }
-  .bunner_content h1 {
+  #banner .bunner_content h1 {
     font-size: 1.8em;
   }
-  .y_text {
-    padding: 0 5em 1em 5em;
+  #banner .bunner_content .slogan {
+    font-size: .8em;
   }
-  .read {
-    font-size: 14px;
-    margin-left: 18.6em;
+  #banner .bunner_content .cta .calltoaction1 a {
+    font-size: .8em;
+    padding: .8em 1em;
   }
-  .services_right .services_img {
-    margin-top: -21em;
-    width: 330px;
-    margin-left: 9em;
-  }
-  .services_right p {
-    padding: 0 5em 1em 5em;
-  }
-  .portfolio-container a img {
-    width: 450px;
-  }
-}
-
-/******************* TABLET *********************/
-@media only screen and (min-width: 640px) {
-  #banner {
-    height: 413px;
-  }
-  img.liqued {
-    margin-top: -100;
-  }
-  .bunner_content h1 {
-    font-size: 2em;
-  }
-  h4 {
-    font-size: 1.8em;
-  }
-  .y_text {
-    font-size: 18px;
-  }
-  .read {
-    margin-left: 20.4em;
-  }
-  .services_right p {
-    font-size: 18px;
-  }
-  .services_right p {
-    padding: 0 9em 1em 9em;
-  }
-  .services_right .services_img {
-    margin-top: -21em;
-    width: 290px;
-    margin-left: 14em;
-  }
-  #work .work_disc {
-    font-size: 18px;
-  }
-  #work p {
-    font-size: 1em;
-  }
-  #work .work_disc {
-    padding-bottom: 1.5em;
+  #banner .bunner_content .cta .calltoaction2 a {
+    font-size: .8em;
+    padding: .8em 1em;
   }
   .portfolio-container a img {
     border-radius: .4em;
     margin-bottom: 2em;
-    width: 680px;
-  }
-  img.liqued3 {
-    margin-left: 0;
-    width: 100%;
-  }
-  .contact-section h2 {
-    font-size: 1.8em;
-  }
-  .contact-section .send-message-cta {
-    font-size: 1.2em;
-  }
-  footer ul a {
-    padding-left: .8em;
-    font-size: 1em;
-  }
-  .footer-list {
-    margin-left: 15.8em !important;
-  }
-  footer .logo span {
-    display: unset;
-    margin-left: 1em;
-    width: 100px;
-    margin-top: 0.8em;
-  }
-  .services_right .services_img {
-    margin-top: -15em;
-    width: 413px;
-  }
-  #process h4 {
-    padding-top: 2em;
+    width: 300px;
   }
 }
 
-@media only screen and (min-width: 750px) {
-  #y_us {
-    position: relative;
+@media only screen and (min-width: 425px) {
+  #banner .bunner_content h1 {
+    font-size: 2.3em;
   }
-  .read {
-    font-size: 15px;
-    margin-left: 23em;
+  #banner .bunner_content .slogan {
+    font-size: 1.1em;
   }
-  .footer-list {
-    margin-left: 23em !important;
-  }
-}
-
-@media only screen and (min-width: 832px) {
-  .bunner_content h1 {
-    font-size: 3em;
-  }
-  #banner .slogan {
-    font-size: 1.3em;
-  }
-  #banner {
-    height: 500px;
-  }
-  #y_us {
-    position: relative;
-    height: 650px;
-  }
-  .read {
-    float: right;
-    margin-right: 2em;
-  }
-  #y_us > a {
-    margin-top: -3.5em;
-  }
-  .y_up {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-bottom: 2em;
-    margin-top: -10em;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .y_text {
-    font-size: 22px;
-    margin-top: 7em;
-    width: 380px;
-    text-align: right;
-    padding: 0;
-  }
-  .y_img {
-    width: 30%;
-    height: 0%;
-    padding-left: 2em;
-  }
-  #y_us h4 {
-    font-size: 1.8em;
-    text-align: right;
-    padding-bottom: -13px;
-    padding-top: 5em;
-    margin-top: 1em;
-    margin-bottom: -4em;
-  }
-  img.liqued4 {
-    margin-bottom: -13em;
-  }
-  #services {
-    padding-top: 9em;
-  }
-  .services_right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .services_right .services_img {
-    margin: 0;
-  }
-  .services_right .services_img {
-    width: 360px;
-    margin-right: 3em;
-  }
-  #services h4 {
-    font-size: 1.8em;
-    text-align: left;
-    margin-bottom: -9.5em;
-    margin-left: 1.5em;
-  }
-  .services_right p {
-    padding: 0;
-  }
-  .services_right p {
-    font-size: 22px;
-    width: 330px;
-    padding-left: 2em;
-    text-align: left;
-    margin-top: 12em;
-  }
-  #work .work_disc {
-    padding-bottom: 22px;
-  }
-  #work p {
+  #banner .cta .calltoaction1 a {
     font-size: 1em;
-    width: 0 auto;
-    padding: 0 2em 0 2em;
+    width: 135px;
+    margin-right: 1em;
+  }
+  #banner .cta .calltoaction2 a {
+    font-size: 1em;
+    width: 135px;
+  }
+  #banner .left .cta {
+    padding: 0 5em;
+  }
+  .services_right .servSvg {
+    width: 420px;
+    height: 450px;
   }
   .portfolio-container a img {
-    width: 650px;
+    width: 359px;
   }
 }
 
-@media only screen and (min-width: 900px) {
-  .container {
-    padding-left: 4em;
-    padding-right: 4em;
-    text-align: center;
+/******************* TABLET *********************/
+@media only screen and (min-width: 768px) {
+  h4 {
+    font-size: 2.3em;
   }
-  #banner {
-    height: 600px;
+  p {
+    font-size: 1.1em;
   }
-  .bunner_content {
-    place-content: center;
-    text-align: center;
-    color: white;
-  }
-  .bunner_content .center, .bunner_content .right {
-    display: none;
-  }
-  .bunner_content h1 {
-    font-size: 3.5em;
-    width: 500px;
-    margin-top: 1em;
-  }
-  .row {
-    padding: 5em 0 7em 0;
-  }
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .navbar .logo span {
-    display: unset;
-  }
-  .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .navbar .mobile-menu {
+    width: 45px;
   }
   .navbar .logo .logo1 {
-    margin-top: -.4em;
-    width: auto;
+    width: 60px;
   }
-  span {
-    color: #040425;
-    margin-top: .5em;
-    margin-left: 1em;
+  .navbar .logo {
+    width: 60px;
   }
-  nav {
-    background: none;
+  nav .closeNav {
+    height: 5.75em;
   }
-  .navbar nav {
+  nav .navList {
+    margin-top: 4em;
+  }
+  nav li a {
+    font-size: 2em;
+  }
+  #mobile-exit {
+    width: 7%;
+  }
+  #banner .bunner_content h1 {
+    font-size: 3.4em;
+  }
+  #banner .bunner_content .slogan {
+    font-size: 1.4em;
+  }
+  #banner .bunner_content .left {
+    padding: 5em 0 1em 0;
+  }
+  #banner .bunner_content .left .cta {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #y_us .read {
+    font-size: .9em;
+  }
+  .services_right .servSvg {
+    width: 530px;
+    height: 450px;
+  }
+  .portfolio-container a img {
+    width: 680px;
+  }
+  .subtitle {
+    font-size: 1.2em;
+  }
+  #footer .logo span {
+    display: unset;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 1em;
   }
-  .mobile-menu-exit {
-    display: none;
+  #footer ul a {
+    padding-left: .55em;
+    color: white;
+    font-size: 1em;
+  }
+}
+
+/******************* Laptop *********************/
+@media only screen and (min-width: 1024px) {
+  h4 {
+    font-size: 3.3em;
+  }
+  p {
+    font-size: 1.6em;
+  }
+  .navbar {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: white;
   }
   .navbar .mobile-menu {
     display: none;
   }
-  nav .primary-nav {
-    margin-top: .5em;
+  .navbar nav {
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    float: right;
+    height: unset;
+    position: relative;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: unset;
+    background: none;
   }
-  .navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 1em 0em 1.5em 0em;
-  }
-  nav li a {
+  .navbar nav li a {
     color: #040425;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: .5em;
     font-size: 1.3em;
     text-align: right;
   }
-  img.liqued {
-    margin-top: -8em;
-    margin-left: -.5em;
-  }
-  #y_us {
-    position: relative;
-    height: 645px;
-  }
-  .y_text {
-    margin-bottom: -12em;
-  }
-  .read {
-    float: right;
-    margin-right: 4.5em;
-  }
-  #y_us > a {
-    margin-top: -4em;
-  }
-  .footer-list {
-    margin-left: 28em !important;
-  }
-  .desktop {
-    display: unset;
-    width: 780px;
-  }
-  .process_list {
+  .navbar nav .mobile-menu-exit {
     display: none;
   }
-  #process h4 {
-    text-align: left;
-    padding-left: 3em;
+  .navbar nav .closeNav {
+    display: none;
   }
-  .services_right .services_img {
-    margin-top: -10em;
+  .navbar nav .navList {
+    margin-top: 0;
+    padding: 0;
   }
-  #services h4 {
-    margin-bottom: -12.5em;
-  }
-  .services_right p {
-    margin-top: 16em;
-  }
-}
-
-@media only screen and (min-width: 948px) {
-  .desktop {
-    display: unset;
-    width: 920px;
-  }
-  .bunner_content .center {
-    width: 440px;
-    margin-top: -1em;
-  }
-  .read {
-    margin-left: 45.5em;
-  }
-  #y_us > a {
-    margin-top: -5em;
-  }
-  #services {
-    padding-top: 15em;
-  }
-  .footer-list {
-    margin-left: 33em !important;
-  }
-  #banner {
-    height: 598px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .read {
-    margin-left: 47.5em;
-  }
-  #y_us > a {
-    margin-top: -6.5em;
-  }
-}
-
-@media only screen and (min-width: 1038px) {
-  #banner {
-    height: 490px !important;
-  }
-  .bunner_content h1 {
-    font-size: 2.3em;
-  }
-  .bunner_content .center {
-    width: 440px;
-    margin-top: -2em;
-  }
-  .bunner_content .right {
-    margin-top: 5em;
-    margin-left: 1.5em;
-  }
-  #y_us {
-    height: 730px;
-  }
-  .read {
-    margin-left: 45.5em;
-  }
-  #y_us > a {
-    margin-top: -7.5em;
-  }
-  .services_container {
-    padding: 0 2em 0 2em;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .services_right .services_img {
-    margin-top: -8em;
-    margin-bottom: 3em;
-    width: 390px;
-    margin-right: 0;
-  }
-  .services_right p {
-    width: 400px;
-  }
-  #process h4 {
-    text-align: left;
-    padding-left: 2em;
-  }
-  .desktop {
-    width: 1040px !important;
-  }
-  #work .work_disc {
-    font-size: 22px;
-    padding-bottom: 2em;
-  }
-  .portfolio-container {
+  .navbar nav .primary-nav {
+    margin-top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    float: unset;
+  }
+  .navbar .navContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .navbar .logo span {
+    display: unset;
+    margin-top: 0;
+    margin-left: 1em;
+    width: unset;
+  }
+  .navbar .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .logo .logo1 {
+    width: 70px;
+  }
+  span .piName {
+    width: 14em;
+  }
+  #banner .bunner_content .left h1 {
+    font-size: 5em;
+  }
+  #banner .bunner_content .slogan {
+    font-size: 2.2em;
+  }
+  #banner .bunner_content .cta .calltoaction1 a {
+    font-size: 1.1em;
+    width: 125px;
+    padding: 1em 2em;
+  }
+  #banner .bunner_content .cta .calltoaction2 a {
+    font-size: 1.1em;
+    width: 125px;
+    padding: 1em 2em;
+  }
+  #y_us .read {
+    font-size: 1.1em;
+  }
+  #process .process_list img {
+    width: 200px;
+  }
+  .subtitle {
+    font-size: 1.6em;
   }
   .portfolio-container a img {
-    width: 450px;
-  }
-  .work_list {
-    text-align: left;
-  }
-  .portfolio-container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .inner {
-    margin-top: 7em;
+    width: 900px;
   }
   .view {
     font-size: 1.3em;
   }
-  .contact-section .contact-right {
-    display: unset;
+  .contact-section input, .contact-section textarea {
+    font-size: 1.1em;
   }
-  .contact-section .container .contact-left {
-    text-align: left;
-    width: 600px;
+  .contact-section #budget {
+    font-size: 1.1em;
   }
-  .contact-section .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .contact-right img {
-    width: 400px;
-    margin-top: 3.5em;
-  }
-}
-
-/********************** laptop *****************/
-@media only screen and (min-width: 1085px) {
-  .bunner_content .center {
-    width: 400px;
-    margin-top: -1em;
-  }
-  #y_us {
-    padding-bottom: 3em;
-  }
-  .services_right .services_img {
-    margin-top: -8em;
-    margin-bottom: 6em;
-    width: 400px;
-    margin-right: 3em;
-  }
-  #work p {
+  .contact-section p, .contact-section label {
     font-size: 1em;
-    width: 0 auto;
-    padding: 0;
+    margin-top: .2em;
   }
-  .desktop {
-    width: 980px;
+  .contact-section input.cb {
+    width: 20px;
+    height: 20px;
+    margin-right: 1em;
   }
-  .footer-list {
-    margin-left: 38em !important;
+  .contact-section .send-message-cta {
+    font-size: unset;
   }
-}
-
-@media only screen and (min-width: 1078px) {
-  #banner {
-    height: 720px;
+  .logo {
+    width: unset;
+    height: unset;
   }
-  .bunner_content .center {
-    width: 550px;
-    margin-top: -2em;
+  #footer ul {
+    font-size: 1.3em;
   }
-  #y_us {
-    height: 680px !important;
-  }
-  .work_list a img {
-    width: 500px;
-  }
-  .work_list {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .work_list p {
-    font-size: 1em;
-    width: 400px;
-    padding: 0;
-  }
-  #work .work_disc {
-    text-align: center;
-  }
-  .footer-list {
-    margin-left: 38em !important;
+  span {
+    width: 14em;
   }
 }
 
-@media only screen and (min-width: 1120px) {
-  #banner {
-    height: 650px !important;
-  }
+@media only screen and (min-width: 1440px) {
   .bunner_content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -990,66 +701,6 @@ ul {
   }
   .bunner_content .center {
     width: 550px !important;
-  }
-  #y_us {
-    height: 730px !important;
-  }
-  #y_us > a {
-    margin-top: -9.5em;
-  }
-  .services_right .services_img {
-    margin-left: 40px;
-  }
-  .footer-list {
-    margin-left: 42em !important;
-  }
-}
-
-@media only screen and (min-width: 1205px) {
-  nav .primary-nav {
-    margin-left: 9em;
-  }
-  #banner {
-    height: 710px !important;
-  }
-  #banner .bunner_content .center {
-    width: 503px !important;
-  }
-  #y_us {
-    height: 780px !important;
-  }
-  .y_text {
-    width: 520px;
-  }
-  .read {
-    margin-right: 4.5em;
-  }
-  #y_us > a {
-    margin-top: -14em;
-  }
-  .services_right .services_img {
-    margin-left: 90px;
-  }
-  #process h4 {
-    padding-top: 0;
-  }
-  .desktop {
-    width: 1090px !important;
-  }
-  .work_list a img {
-    width: 650px;
-  }
-  .services_right p {
-    margin-top: 18em;
-  }
-  #services h4 {
-    margin-bottom: -14.5em;
-  }
-  .view {
-    margin-top: 4em;
-  }
-  .footer-list {
-    margin-left: 47em !important;
   }
 }
 
@@ -1306,163 +957,6 @@ ul {
   footer ul {
     font-size: 1.3em;
     margin-top: 1.3em;
-  }
-}
-
-@media only screen and (min-width: 2560px) {
-  .navbar {
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-  .navbar nav {
-    margin-top: .6em;
-    width: 28%;
-  }
-  #banner {
-    height: 1540px !important;
-  }
-  #banner .bunner_content h1 {
-    font-size: 85px;
-    width: 800px;
-  }
-  #banner .slogan {
-    font-size: 50px;
-  }
-  #banner .bunner_content .center {
-    width: 1100px !important;
-  }
-  #y_us {
-    height: 1400px !important;
-    padding-top: 9em;
-  }
-  #y_us h4 {
-    margin-bottom: 0;
-    font-size: 60px;
-  }
-  #y_us .y_text {
-    margin-top: 4em;
-    width: 950px;
-    font-size: 40px;
-  }
-  #y_us .y_img {
-    margin-top: -22em;
-  }
-  #y_us h4 {
-    padding-top: 3em;
-  }
-  #y_us .read {
-    font-size: 32px;
-    margin-right: 2.5em;
-  }
-  #y_us a {
-    margin-top: -9.3em;
-  }
-  #services {
-    padding-top: 25em;
-  }
-  #services h4 {
-    font-size: 60PX;
-    margin-bottom: -8em;
-    margin-left: 1.4em;
-  }
-  #services .services_right p {
-    font-size: 40px;
-    width: 800px;
-    margin-top: 12em;
-  }
-  #services .services_right .services_img {
-    margin-left: 50px;
-    width: 700px;
-  }
-  #process h4 {
-    padding-top: 4em;
-    font-size: 60px;
-  }
-  #process .desktop {
-    width: 2400px !important;
-  }
-  #work h4 {
-    font-size: 60px;
-  }
-  #work .work_disc {
-    font-size: 40px;
-  }
-  #work .work_list a img {
-    width: 1400px;
-  }
-  #work .inner {
-    margin-top: 12em;
-  }
-  #work .view {
-    font-size: 40px;
-  }
-  #work p {
-    font-size: 30px;
-  }
-  #work .work_list p {
-    width: 800px;
-  }
-  .contact-section h2 {
-    font-size: 60px;
-  }
-  .contact-section .container .contact-left {
-    text-align: left;
-    width: 1100px;
-  }
-  .contact-section input, .contact-section textarea {
-    padding: 1em;
-  }
-  .contact-section #budget {
-    padding: 1em;
-    font-size: 30px;
-  }
-  .contact-section .contact-right img {
-    width: 1000px;
-    margin-top: 9em;
-  }
-  .contact-section p, .contact-section label {
-    font: 30px 'Fira Sans', sans-serif;
-    margin-top: 0;
-  }
-  .contact-section .send-message-cta {
-    font-size: 2em;
-  }
-  .contact-section .contact-section .check #tc {
-    width: 0px;
-    margin-top: .45em;
-  }
-  .contact-section input.cb {
-    width: 30px;
-    height: 30px;
-  }
-  .contact-section input, .contact-section option, .contact-section textarea {
-    font-size: 30px;
-  }
-  #footer {
-    height: 160px;
-  }
-  #footer .footer-list {
-    margin-left: 118em !important;
-  }
-  #footer footer ul {
-    font-size: 1.8em;
-    margin-top: 1.1em;
-  }
-  #footer footer .logo span {
-    width: 558px;
-    margin-top: 0.8em;
-  }
-  #footer footer {
-    margin-top: 1.4em;
-  }
-  #footer footer > a > img {
-    width: 100px;
-    height: 100px;
-    margin-top: -1em;
-  }
-  #footer a > span > img {
-    width: 327px;
-    margin-top: -.5em;
   }
 }
 /*# sourceMappingURL=main.css.map */
