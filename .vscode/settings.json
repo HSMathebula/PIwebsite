@@ -1,5 +1,5 @@
 {
     "editor.codeActionsOnSave": null,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 5000
+    "files.autoSaveDelay": 5000,
+    "liveServer.settings.port": 5501
 }

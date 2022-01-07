@@ -1,0 +1,30 @@
+{
+  "name": "pi_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HSMathebula/PIwebsite.git"
+  },
+  "keywords": [
+    "paper",
+    "instrument"
+  ],
+  "author": "paper instrument",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HSMathebula/PIwebsite/issues"
+  },
+  "homepage": "https://github.com/HSMathebula/PIwebsite#readme",
+  "dependencies": {
+    "express-fileupload": "^1.2.1",
+    "express.js": "^1.0.0",
+    "firebase": "^9.5.0",
+    "firebase-auth": "^0.1.2",
+    "nodemon": "^2.0.15"
+  }
+}
